@@ -1,0 +1,60 @@
+{
+    "name": "stormkix/laravel-sharded-storage",
+    "description": "Verteilt gespeicherte Dateien per Hash-Sharding auf Unterverzeichnisse, damit einzelne Verzeichnisse nicht überlaufen.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "storage",
+        "filesystem",
+        "sharding",
+        "uploads"
+    ],
+    "homepage": "https://github.com/stormkix/laravel-sharded-storage",
+    "authors": [
+        {
+            "name": "stormkix",
+            "email": "stm@taurus-it.de"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/stormkix/laravel-sharded-storage/issues",
+        "source": "https://github.com/stormkix/laravel-sharded-storage"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/filesystem": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "ext-ctype": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stormkix\\ShardedStorage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stormkix\\ShardedStorage\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stormkix\\ShardedStorage\\ShardedStorageServiceProvider"
+            ],
+            "aliases": {
+                "ShardedStorage": "Stormkix\\ShardedStorage\\Facades\\ShardedStorage"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
