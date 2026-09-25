@@ -23,10 +23,10 @@ Soll öffentlich über Packagist veröffentlicht werden.
 - Vendor `stormkix`, Namespace `Stormkix\ShardedStorage`.
 - Der zurückgegebene relative Pfad wird in der Datenbank gespeichert;
   Lesen/Löschen läuft danach über `Storage::disk(...)`.
-- PHP ^8.2, Laravel 11–13, Tests mit Orchestra Testbench + PHPUnit.
+- PHP ^8.2, Laravel 12–13, Tests mit Orchestra Testbench + PHPUnit.
 - Tests: `composer test`. Keine Tests mit `UploadedFile::fake()->image()`
   (benötigt GD), stattdessen `->create()`.
-- CI: `.github/workflows/tests.yml` (Matrix PHP 8.2–8.4 × Laravel 11–13).
+- CI: `.github/workflows/tests.yml` (Matrix PHP 8.2–8.4 × Laravel 12–13).
 
 ## Offene Punkte
 1. GitHub-Repo anlegen, pushen, `v0.1.0` oder `v1.0.0` taggen, bei Packagist einreichen.
